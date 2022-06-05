@@ -1,0 +1,51 @@
+*** Configurando o ambiente para execução dos testes automatizados ***
+
+Sistema Operacional utilizado: Windows
+IDE utilizada: Visual Studio Code
+Library utilizada: Selenium
+Framework utilizado: Robot Framework
+
+1º passo: instalação do Python
+	- o Python é um pré requisito para usar o robot, para instalar as bibliotecas é necessário utilizar o "pip" (útil para instalar e gerenciar pacotes escritos em Python), além de ser possível criar novas novas bibliotecas utilizando, entre outras, essa linguagem.
+
+	I. Acessar o link "https://www.python.org/downloads/"
+	II. Clicar em "download Python V" (onde "V" é a última versão disponível do Python para Windows)
+	III. Adicione o Pyhton ao path, nas variáveis do sistema acessando "Propriedades do Sistema" > "Variáveis de Ambiente" > "Path" > "Editar" > insira o caminho de onde instalou o Python no Path
+	IV. Confira se o passo anterior foi feito de forma correta abrindo o cmd > "python --version" > (aparecerá a versão do python) > "pip --version" > (aparecerá a versão do pip)
+
+
+2º passo: instalação do Robot Framework
+
+	I. Abra o cmd > "pip install robotframework" > (aguarde a instalação)
+	II. Verifique se foi instalado de forma correta. Ainda no cmd > "pip freeze" > (listará todos os pacotes instalados pelo pip, veja se o robot está na lista
+
+
+3º passo: instalando a Selenium Library
+	I. cmd > "pip install --upgrade robotframework-seleniumlibrary"
+	
+
+4º passo: instalando e configurando a IDE (Visual Studio Code)
+	I. Acesse o link "https://code.visualstudio.com/Download" e faça o download para windows
+	II. Para configurar o robot: abra o VS Code > "extensões" > "Robot Framework Language Server" da Robocorp > "install"
+	III. Reinicie o VSCode para garantir a instalação
+	
+
+6º passo: instalando o web driver
+	- para testar um sistema web utilizando o selenium, é necessário instalar um drive do browser utilizado, nesse caso, utilizei o Chrome
+	
+	I. Acesse o link "https://chromedriver.chromium.org/downloads" -- se desejar usar o firefox, é necessário instalar o "Geckodriver"
+	II. Busque pela release que suporte a versão do chrome usada na sua máquina
+	III. (salvei e extraí o webdriver na pasta do "Scripts" python, apenas porque está mapeado nas variáveis do sistema)
+	
+
+*** Como executar os testes ***
+
+1º passo: para rodar os testes
+	- é importante certificar de que os arquivos (ze_resources, ze_testes, ze_variaveis, gerador de cpf) estejam todos na mesma pasta
+	- pelo terminal do Visual Studio: abre o terminal na pasta do projeto e escreva o comando "robot ze_testes.robot"
+	- para executar apenas um caso de teste: robot -t "Caso de teste x: aaaa" ze_testes.robot
+	- pelo cmd: acesse a pasta do projeto e escreva o mesmo comando que escrevera no terminal do VS code
+	
+	
+2º passo: ver o log de execução dos testes
+	- executando o teste como falado no passo anterior, um arquivo "log" será criado na mesma pasta onde estão arquivos de teste. Para ver o resultado e detalhamento de execução você pode abrir esse arquivo com a web e visualizar a descrição dos comandos e do resultado da execução de cada um deles
