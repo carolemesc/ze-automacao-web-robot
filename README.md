@@ -61,7 +61,6 @@ para testar um sistema web utilizando o selenium, é necessário instalar um dri
 1º passo: para rodar os testes
 - é importante certificar de que os arquivos (ze_resources.robot, ze_testes.robot, ze_variaveis.robot, gerador_cpf.py, nome_numero_aleatorio.py e telefone.py) estejam todos na mesma pasta
 - pelo terminal do Visual Studio: abre o terminal na pasta do projeto e escreva o comando "robot ze_testes.robot"
-- para executar apenas um caso de teste: robot -t "Caso de teste x: aaaa" ze_testes.robot
 - pelo cmd: acesse a pasta do projeto e escreva o mesmo comando que escrevera no terminal do VS code
 	
 	
